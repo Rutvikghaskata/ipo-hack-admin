@@ -9,8 +9,9 @@ import HttpService from "../services/http.service";
 import { API_CONFIG } from "../constants/constant";
 import { createAction } from "../utils/common";
 import * as actionTypes from "../redux/actionTypes";
+import Settings from "../pages/Settings";
 
-const allowSideBarPaths = ["news", "gmp", ""];
+const allowSideBarPaths = ["news", "gmp", "settings",""];
 
 function RoutesScreen() {
   let location = useLocation();
@@ -54,6 +55,7 @@ function RoutesScreen() {
                 <Routes>
                   <Route expect path="news" element={<News />} />
                   <Route expect path="gmp" element={<GMP />} />
+                  <Route expect path="settings" element={<Settings />} />
                   <Route path="*" element={<Navigate to="/news" />} />
                 </Routes>
               )}

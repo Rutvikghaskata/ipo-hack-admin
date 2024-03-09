@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 import { createAction } from "../../../utils/common";
 import * as actionTypes from "../../../redux/actionTypes";
 import { IoIosLogOut } from "react-icons/io";
+import { CiSettings } from "react-icons/ci";
 
 function SideBar() {
   let location = useLocation();
@@ -76,6 +77,10 @@ function SideBar() {
             </defs>
           </svg>
           <Link to={"./gmp"}>GMP</Link>
+        </li>
+        <li className={CURRENT_WB_NAME === "settings" && "active"}>
+          <CiSettings size={28}/>
+          <Link to={"./settings"}>Settings</Link>
         </li>
       </ul>
     </aside>
