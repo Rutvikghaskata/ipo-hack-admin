@@ -150,7 +150,7 @@ function Setting() {
               },
             ]}
           >
-            <Input type="url" placeholder="Enter Value" />
+            <Input type="text" placeholder="Enter Value" />
           </Form.Item>
           <Button
             type="submit"
