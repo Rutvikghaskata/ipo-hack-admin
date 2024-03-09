@@ -1,0 +1,59 @@
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  border-top: 1px solid var(--primary-color);
+
+  .page-no,
+  .break {
+    margin: 0 5px;
+    background-color: var(--primary-color-20);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-dark-color);
+    padding: 10px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    &.selected {
+      background-color: var(--primary-color-60);
+    }
+  }
+
+  .previous,
+  .next {
+    margin: 0 10px;
+    height: 40px;
+    width: 100px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    background-color: var(--primary-color-20);
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--primary-dark-color);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+
+    &:last-child {
+      margin-right: 40px;
+    }
+    &:hover {
+      background-color: var(--primary-color-60);
+    }
+    &.disable {
+      background-color: var(--primary-color-20);
+      border: none;
+      color: var(--primary-dark-color-80);
+      cursor: default;
+      .icon {
+        polyline {
+          stroke: var(--primary-dark-color-80);
+        }
+      }
+    }
+  }
+}
